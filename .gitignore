@@ -1,0 +1,6 @@
+# 本地项目代码与文档，不纳入版本库
+ProjectCode/
+ProjectDocs/
+
+# Hook 运行时临时状态，不提交
+.cursor/hooks/state/
