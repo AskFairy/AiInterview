@@ -1,0 +1,26 @@
+{
+  "version": 1,
+  "hooks": {
+    "beforeSubmitPrompt": [
+      {
+        "command": ".cursor/hooks/archive-chat.sh user_prompt"
+      }
+    ],
+    "afterAgentResponse": [
+      {
+        "command": ".cursor/hooks/archive-chat.sh response"
+      },
+      {
+        "command": ".cursor/hooks/auto-commit.sh"
+      }
+    ],
+    "sessionEnd": [
+      {
+        "command": ".cursor/hooks/archive-chat.sh session_end"
+      },
+      {
+        "command": ".cursor/hooks/auto-commit.sh"
+      }
+    ]
+  }
+}
